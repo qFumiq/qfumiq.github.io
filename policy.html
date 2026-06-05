@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fumiq | Политика и регламент</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-main: #e5e5e5;
+            --text-muted: #737373;
+            --border-color: #171717;
+            --accent: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem;
+        }
+
+        header {
+            margin-bottom: 6rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 3rem;
+        }
+
+        .legal-section {
+            margin-bottom: 5rem;
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 3rem;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 500;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #a3a3a3;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .legal-highlight {
+            padding: 2.5rem;
+            background: #0a0a0a;
+            border: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        .stop-list-box {
+            border: 1px solid #262626;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            margin-top: 1rem;
+        }
+
+        .footer-line {
+            margin-top: 8rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        @media (max-width: 850px) {
+            .legal-section {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .section-label {
+                position: static;
+                margin-bottom: 1rem;
+            }
+            h1 { font-size: 2.5rem; }
+            .content-wrapper { padding: 4rem 1.5rem; }
+        }
+
+        ::selection {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <header>
+            <div class="mono text-[10px] uppercase text-[#444] mb-6 tracking-[0.3em]">Legal & Ethical Framework // v1.0</div>
+            <h1>Декларация об исследовательской деятельности</h1>
+            <p class="text-xl text-[#737373] font-light max-w-2xl mt-4">
+                Настоящий документ определяет правовые и этические границы проекта, посвящённого исследованию открытых источников информации (OSINT) в академических и научно-познавательных целях.
+            </p>
+        </header>
+
+        <main>
+            <!-- Раздел 01: Статус проекта -->
+            <div class="legal-section">
+                <div class="section-label mono">01 / Status</div>
+                <div>
+                    <h2>Статус проекта</h2>
+                    <p>Настоящий проект является <strong>частной исследовательской инициативой</strong>. Все материалы, публикуемые на ресурсе, созданы исключительно в <strong>образовательных, научных и информационных целях</strong>. Проект не является средством массовой информации, юридическим лицом или индивидуальным предпринимателем, если не указано иное.</p>
+                    <p>Деятельность в рамках проекта направлена на демонстрацию уязвимостей информационной среды, повышение цифровой грамотности и развитие методологии поиска в открытых источниках. Все выводы и аналитика носят сугубо <strong>гипотетический и исследовательский характер</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Раздел 02: Отказ от ответственности -->
+            <div class="legal-section">
+                <div class="section-label mono">02 / Disclaimer</div>
+                <div>
+                    <h2>Отказ от ответственности (ст. 28 ГПК РФ, ст. 21 УПК РФ)</h2>
+                    <p>В соответствии с <strong>ч. 3 ст. 17 Конституции РФ</strong> осуществление прав и свобод человека и гражданина не должно нарушать права и свободы других лиц. Проект не посягает на частную жизнь, честь и достоинство граждан, а также не разглашает сведения, составляющие охраняемую законом тайну.</p>
+                    <p><strong>Администрация проекта НЕ НЕСЁТ ОТВЕТСТВЕННОСТИ</strong> за:</p>
+                    <ul class="space-y-4 border-l border-[#222] pl-6 my-6 italic text-[#888] text-[0.95rem]">
+                        <li>• Любые действия третьих лиц, использующие опубликованные материалы в противоправных целях;</li>
+                        <li>• Интерпретацию исследовательских данных как призыва к действию или инструкции к совершению незаконных действий;</li>
+                        <li>• Достоверность информации, полученной из открытых источников, которые не контролируются проектом.</li>
+                    </ul>
+                    <p>Все упоминания конкретных лиц, организаций или событий являются результатом анализа <strong>публичных и общедоступных данных</strong> и не преследуют цели клеветы, оскорбления или дискредитации.</p>
+                </div>
+            </div>
+
+            <!-- Раздел 03: Правовое обоснование в РФ -->
+            <div class="legal-section">
+                <div class="section-label mono">03 / Legal Basis</div>
+                <div>
+                    <h2>Правовое обоснование в РФ</h2>
+                    <p>Деятельность осуществляется в строгом соответствии с законодательством Российской Федерации, в частности:</p>
+                    <div class="stop-list-box">
+                        <ul class="space-y-3 mono text-[12px] text-[#737373]">
+                            <li><span class="text-white">• Федеральный закон № 149-ФЗ "Об информации, информационных технологиях и о защите информации"</span> — сбор и обработка общедоступной информации не требует специального разрешения.</li>
+                            <li><span class="text-white">• Федеральный закон № 152-ФЗ "О персональных данных"</span> — ст. 6 допускает обработку персональных данных без согласия субъекта, если они являются общедоступными (размещены самим субъектом или в обязательных к публикации источниках).</li>
+                            <li><span class="text-white">• Ст. 10 ГК РФ "Пределы осуществления гражданских прав"</span> — не допускаются действия, осуществляемые исключительно с намерением причинить вред другому лицу.</li>
+                        </ul>
+                    </div>
+                    <p class="mt-4"><strong>Важное уточнение:</strong> Проект НЕ осуществляет сбор специальных категорий персональных данных (ст. 10 152-ФЗ: расовая, национальная принадлежность, политические взгляды, религиозные убеждения, состояние здоровья, интимная жизнь). В случае обнаружения таких данных в процессе исследования — они исключаются из отчёта и не подлежат распространению.</p>
+                </div>
+            </div>
+
+            <!-- Раздел 04: Ограничения и отказ в работе -->
+            <div class="legal-section">
+                <div class="section-label mono">04 / Refusal</div>
+                <div>
+                    <h2>Основания для отказа в сотрудничестве</h2>
+                    <p>Я оставляю за собой право <strong>отказать в проведении исследования</strong> любому лицу без объяснения причин, если, по моему экспертному мнению:</p>
+                    <div class="stop-list-box">
+                        <ul class="space-y-2 text-[13px] text-[#737373]">
+                            <li>• Цель запроса имеет признаки противоправной деятельности (ст. 137 УК РФ "Нарушение неприкосновенности частной жизни");</li>
+                            <li>• Объект исследования относится к категории уязвимых лиц (несовершеннолетние, потерпевшие от преступлений, лица под государственной защитой);</li>
+                            <li>• Запрос направлен на разрешение личного/бытового конфликта, ревность, споры о детях, раздел имущества и т.п.;</li>
+                            <li>• Требуется доступ к закрытым базам данных или информации, составляющей государственную/коммерческую/банковскую тайну.</li>
+                        </ul>
+                    </div>
+                    <p class="mt-4">Исследования проводятся <strong>только для корпоративных клиентов, юридических лиц, СМИ, журналистов, исследователей и адвокатов</strong> в рамках их профессиональной деятельности. Работа с физическими лицами возможна только при наличии официального запроса от адвоката или иного уполномоченного лица.</p>
+                </div>
+            </div>
+
+            <!-- Раздел 05: Цели использования материалов -->
+            <div class="legal-section">
+                <div class="section-label mono">05 / Purpose</div>
+                <div>
+                    <h2>Целевое назначение материалов</h2>
+                    <p>Все исследовательские материалы, включая отчёты, аналитические справки и обучающие статьи, предназначены <strong>исключительно для внутреннего использования</strong> заказчиком или подписчиком.</p>
+                    <p><strong>Запрещается:</strong></p>
+                    <ul class="space-y-2 pl-6 list-disc text-[#888] text-sm mt-2">
+                        <li>• Передача отчётов третьим лицам без письменного согласия автора;</li>
+                        <li>• Использование материалов для шантажа, вымогательства, угроз, преследования, доксинга;</li>
+                        <li>• Публикация фрагментов отчётов в публичном доступе без анонимизации;</li>
+                        <li>• Использование данных для совершения действий, подпадающих под ст. 128.1 УК РФ (Клевета) или ст. 207.3 УК РФ.</li>
+                    </ul>
+                    <p class="mt-4">Нарушение данных условий влечёт за собой <strong>немедленное прекращение сотрудничества</strong> и внесение заказчика в «чёрный список» всех смежных OSINT-сообществ.</p>
+                </div>
+            </div>
+
+            <!-- Раздел 06: Финансовая политика -->
+            <div class="legal-section">
+                <div class="section-label mono">06 / Financials</div>
+                <div>
+                    <h2>Финансовая политика</h2>
+                    <p>Вознаграждение за проведённое исследование представляет собой <strong>гонорар за экспертные и аналитические услуги</strong>, а не плату за «данные» или «информацию». Заказчик оплачивает:</p>
+                    <ul class="space-y-1 pl-6 list-disc text-[#888] text-sm my-3">
+                        <li>• Время, затраченное специалистом на поиск и верификацию информации;</li>
+                        <li>• Экспертные знания и методологию анализа;</li>
+                        <li>• Интеллектуальные усилия по структурированию и интерпретации разрозненных данных.</li>
+                    </ul>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                        <div>
+                            <h3 class="mt-0 text-[13px] uppercase tracking-wider text-white/60">Принимаемые активы</h3>
+                            <p class="text-sm">USDT (TRC-20, BEP-20), TON, BTC. Фиатные расчёты обсуждаются индивидуально с юридическими лицами.</p>
+                        </div>
+                        <div>
+                            <h3 class="mt-0 text-[13px] uppercase tracking-wider text-white/60">Порядок оплаты</h3>
+                            <p class="text-sm">100% предоплата для новых клиентов. Для постоянных — гибкие условия (50/50, постоплата).</p>
+                        </div>
+                    </div>
+                    <p class="text-[0.9rem] italic border-t border-[#1a1a1a] pt-4">Все расчёты осуществляются <strong>исключительно на добровольной основе</strong>. Предоставление предоплаты означает полное и безоговорочное согласие с условиями настоящей политики.</p>
+                </div>
+            </div>
+
+            <!-- Раздел 07: Возврат средств -->
+            <div class="legal-section">
+                <div class="section-label mono">07 / Refund</div>
+                <div>
+                    <h2>Политика возврата средств</h2>
+                    <p><strong>Возврат денежных средств НЕ производится</strong> в следующих случаях:</p>
+                    <ul class="space-y-1 pl-6 list-disc text-[#888] text-sm my-3">
+                        <li>• Информация по объекту исследования отсутствует в открытых источниках (нулевой результат);</li>
+                        <li>• Заказчик не удовлетворён полученными данными (объективность результата не может гарантироваться ввиду специфики работы с открытыми источниками);</li>
+                        <li>• В процессе исследования выяснилось, что объект принадлежит к категории, указанной в разделе "Основания для отказа".</li>
+                    </ul>
+                    <p><strong>Возврат возможен ТОЛЬКО</strong> в случае, если я отказываюсь от выполнения заказа до его завершения, либо нарушаю сроки, согласованные до начала работы.</p>
+                    <p>Перед началом работы заказчик обязан подтвердить согласие с настоящим регламентом в письменном виде (в чате/по электронной почте). Это исключает возможность предъявления претензий после получения отчёта.</p>
+                </div>
+            </div>
+
+            <!-- Блок Юрисдикции -->
+            <div class="legal-highlight">
+                <div class="mono text-[10px] text-[#444] mb-8 tracking-[0.2em] uppercase">Legal Basis // Russian Federation</div>
+                
+                <div class="mb-8">
+                    <h2 class="text-white text-xl">О юрисдикции и применимом праве</h2>
+                    <p class="text-sm">Вопросы, связанные с исполнением настоящих условий, регулируются <strong>законодательством Российской Федерации</strong>. Споры подлежат рассмотрению в суде по месту нахождения автора проекта.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="mono text-[12px] uppercase tracking-wider border-b border-[#222] pb-2 mb-4">Ст. 128.1 УК РФ (Клевета)</h3>
+                        <p class="text-[0.9rem] leading-relaxed">
+                            Автор проекта НЕ распространяет заведомо ложные сведения, порочащие честь и достоинство другого лица. Все утверждения в исследовательских материалах основаны исключительно на общедоступных, верифицируемых источниках и субъективной аналитической интерпретации, не имеющей юридической силы обвинительного заключения.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="mono text-[12px] uppercase tracking-wider border-b border-[#222] pb-2 mb-4">Ст. 137 УК РФ (Неприкосновенность частной жизни)</h3>
+                        <p class="text-[0.9rem] leading-relaxed">
+                            Автор проекта НЕ осуществляет незаконный сбор и распространение сведений о частной жизни лица без его согласия. Обрабатываются ТОЛЬКО данные, которые объект исследования добровольно сделал общедоступными (социальные сети, открытые реестры, публичные выступления, профильные форумы, СМИ).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer-line mono">
+            <div>qFumiq © 2026</div>
+            <div class="hidden sm:block border-x border-[#1a1a1a] px-8 py-1">for academic & research purposes only</div>
+            <a href="mailto:contact@fumiq.live" class="hover:text-white transition-colors">contact@qfumiq.live</a>
+        </footer>
+    </div>
+
+</body>
+</html>

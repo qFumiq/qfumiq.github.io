@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qFumiq | SOC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #080808;
+            --card-bg: #0f0f0f;
+            --border-color: #1a1a1a;
+            --accent-white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--accent-white);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            border-color: #333;
+            background: #121212;
+        }
+
+        /* Layout Logic */
+        .profile-section { grid-column: span 4; grid-row: span 2; }
+        .tall-card { grid-column: span 2; grid-row: span 2; }
+        .wide-card { grid-column: span 4; }
+        .standard-card { grid-column: span 2; }
+
+        @media (max-width: 1024px) {
+            .dashboard-grid { grid-template-columns: repeat(4, 1fr); }
+            .profile-section { grid-column: span 4; }
+            .wide-card, .tall-card, .standard-card { grid-column: span 2; }
+        }
+
+        @media (max-width: 640px) {
+            .dashboard-grid { grid-template-columns: 1fr; }
+            .profile-section, .wide-card, .tall-card, .standard-card { grid-column: span 1; }
+        }
+
+        .tag {
+            font-size: 10px;
+            padding: 4px 8px;
+            background: rgba(255,255,255,0.05);
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: fit-content;
+        }
+
+        .img-container {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+        
+        .card:hover .img-container {
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 lg:p-16">
+
+    <div class="max-w-6xl mx-auto">
+        
+        <!-- Navigation / Header -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
+            <div>
+                <h1 class="text-2xl font-medium tracking-tight">Fumiq</h1>
+                <p class="text-sm text-white/40 mt-1">Information Security Engineer (SOC)</p>
+            </div>
+            <div class="flex gap-4 mono text-[11px] text-white/30 uppercase">
+                <span id="current-time">00:00:00</span>
+                <span>/</span>
+                <span>Active Data Node</span>
+            </div>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            
+            <!-- BLOCK 1: IDENTITY & CORE ACTION -->
+            <div class="card profile-section md:flex-row gap-8 items-center">
+                <div class="img-container shrink-0">
+                    <!-- Загрузка изображения из репозитория GitHub -->
+                    <img src="https://raw.githubusercontent.com/qFumiq/qFumiq/refs/heads/main/image.jpg" alt="qFumiq" class="w-32 h-32 md:w-56 md:h-56 object-cover border border-white/5" onerror="this.src='https://via.placeholder.com/200'">
+                </div>
+                <div class="flex flex-col h-full justify-center">
+                    <div class="tag mb-4">Identity</div>
+                    <h2 class="text-2xl font-medium mb-4">qFumiq</h2>
+                    <p class="text-white/40 text-sm leading-relaxed mb-6">
+                        Специализируюсь на изучение кибербезопасности, пентеста, OSINT.
+                    </p>
+                    <a href="https://raw.githubusercontent.com/qFumiq/qFumiq/refs/heads/main/help.html" target="_blank" class="w-full md:w-fit px-6 py-3 bg-white text-black font-semibold text-sm hover:bg-gray-200 transition-colors text-center">
+                        Услуги и помощь
+                    </a>
+                </div>
+            </div>
+
+            <!-- BLOCK 2: MAIN BROADCAST -->
+            <a href="https://t.me/RedSecNote" target="_blank" class="card tall-card group">
+                <div>
+                    <div class="tag mb-6">Telegram Channel</div>
+                    <h3 class="text-2xl font-medium mb-3">Telegram</h3>
+                    <p class="text-white/40 text-sm">Основной узел связи: новости, аналитика и рефлексия</p>
+                </div>
+                <div class="pt-8 flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all uppercase mono text-[10px]">
+                    Open Feed <span class="text-lg">→</span>
+                </div>
+            </a>
+
+            <!-- BLOCK 3: DOCUMENTATION & CODE -->
+            <a href="https://telegra.ph/Osnovy-setej-1---OSI-03-08-2" target="_blank" class="card standard-card">
+                <div class="tag mb-6">Knowledge Base</div>
+                <h3 class="text-lg font-medium mb-2">Telegraph</h3>
+                <p class="text-white/40 text-xs leading-relaxed">Статьи по сетям.</p>
+            </a>
+
+            <a href="https://github.com/qFumiq" target="_blank" class="card standard-card">
+                <div class="tag mb-6">Repository</div>
+                <h3 class="text-lg font-medium mb-2">GitHub</h3>
+                <p class="text-white/40 text-xs leading-relaxed">Инструменты и скрипты для автоматизации задач.</p>
+            </a>
+
+            <a href="https://teletype.in/" class="card standard-card group">
+                <div class="tag mb-6">Portfolio</div>
+                <h3 class="text-lg font-medium mb-2">Portfolio</h3>
+                <p class="text-white/40 text-xs mt-2">Примеры отчетов и реализованных проектов.</p>
+                <div class="mt-4 text-[10px] mono text-white/20 group-hover:text-white/60 transition-colors uppercase">Access Archive</div>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-start gap-8">
+            <div class="max-w-xs">
+                <p class="text-[10px] leading-relaxed text-white/20 uppercase tracking-widest mono">
+                    Данный ресурс создан исключительно в образовательных и научно-исследовательских целях и представляет собой проект, направленный на изучение вопросов кибербезопасности и защиты персональных данных. Все права защищены. 2026
+                </p>
+            </div>
+            <div class="flex gap-8 text-[11px] mono text-white/40 uppercase">
+                <a href="policy.html" class="hover:text-white transition-colors">Privacy</a>
+                <a href="" class="hover:text-white transition-colors">Contact</a>
+                <a href="price.html" class="hover:text-white transition-colors">Price-List</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ru-RU', { hour12: false });
+            document.getElementById('current-time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>

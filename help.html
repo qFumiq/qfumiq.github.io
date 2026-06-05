@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qFumiq | Security Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-main: #e5e5e5;
+            --text-muted: #737373;
+            --border-color: #171717;
+            --accent: #ffffff;
+            --accent-red: #ff3b3b;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        header {
+            margin-bottom: 4rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .category-header {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #444;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .category-header::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .service-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: baseline;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .service-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .service-title {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .service-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            max-width: 550px;
+        }
+
+        .price-tag {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-align: right;
+            padding-left: 2rem;
+        }
+
+        .info-block {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: #0a0a0a;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .danger-note {
+            border-left: 3px solid var(--accent-red);
+            background: rgba(255, 59, 59, 0.05);
+        }
+
+        footer {
+            margin-top: 6rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        @media (max-width: 640px) {
+            .service-item { grid-template-columns: 1fr; gap: 0.5rem; }
+            .price-tag { text-align: left; padding-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <header>
+            <div class="mono text-[10px] uppercase text-[#444] mb-4 tracking-[0.3em]">Security Services // 2026</div>
+            <h1>Прайс-лист</h1>
+            <p class="text-[#737373] text-sm mt-2">Услуги в области информационной безопасности, анализа защищённости и SOC-аудита</p>
+        </header>
+
+        <main>
+            <!-- Категория 01: Пентест и анализ защищённости -->
+            <div class="category-header mono">01 / Penetration Testing</div>
+            <div class="service-list">
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Веб-приложение (Web App Pentest)</span>
+                        <span class="service-desc">Тестирование на проникновение веб-приложений. Поиск уязвимостей OWASP Top 10: XSS, SQLi, CSRF, SSRF, IDOR и др.</span>
+                    </div>
+                    <div class="price-tag mono">от $200</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Мобильное приложение (iOS/Android)</span>
+                        <span class="service-desc">Анализ безопасности мобильных клиентов: реверс-инжиниринг, insecure storage, network traffic interception.</span>
+                    </div>
+                    <div class="price-tag mono">от $250</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">API Security Assessment</span>
+                        <span class="service-desc">Тестирование REST/GraphQL API. Проверка авторизации, rate limiting, business logic flaws.</span>
+                    </div>
+                    <div class="price-tag mono">от $180</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Внутренняя сеть (Internal Infrastructure)</span>
+                        <span class="service-desc">Анализ безопасности корпоративной сети, AD, lateral movement vectors.</span>
+                    </div>
+                    <div class="price-tag mono">от $400</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Социальная инженерия</span>
+                        <span class="service-desc">Фишинг-симуляция, тестирование сотрудников на устойчивость к атакам.</span>
+                    </div>
+                    <div class="price-tag mono">от $100</div>
+                </div>
+            </div>
+
+            <!-- Категория 02: SOC и мониторинг -->
+            <div class="category-header mono">02 / SOC & Monitoring</div>
+            <div class="service-list">
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Аудит SIEM-системы</span>
+                        <span class="service-desc">Проверка корректности настройки корреляций, полноты логирования, правил детектирования.</span>
+                    </div>
+                    <div class="price-tag mono">от $150</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Threat Hunting (проактивный поиск угроз)</span>
+                        <span class="service-desc">Анализ логов и трафика на наличие недетектируемых атак, скрытых персистенций.</span>
+                    </div>
+                    <div class="price-tag mono">от $300</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">IR — Расследование инцидентов</span>
+                        <span class="service-desc">Анализ взлома, форензика, восстановление хронологии атаки, выявление первопричины.</span>
+                    </div>
+                    <div class="price-tag mono">от $350</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Аналитика угроз (Threat Intelligence)</span>
+                        <span class="service-desc">Сбор и анализ данных об актуальных угрозах, TTPs, IoC, группировках.</span>
+                    </div>
+                    <div class="price-tag mono">от $120</div>
+                </div>
+            </div>
+
+            <!-- Категория 03: Red Teaming / Bug Bounty -->
+            <div class="category-header mono">03 / Red Teaming & Adversarial Simulation</div>
+            <div class="service-list">
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Red Team Exercise (полный цикл)</span>
+                        <span class="service-desc">Имитация реального противника, комплексная проверка всех слоёв защиты.</span>
+                    </div>
+                    <div class="price-tag mono">от $800</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Bug Bounty — assistance</span>
+                        <span class="service-desc">Помощь в поиске уязвимостей на программах BB, валидация отчётов.</span>
+                    </div>
+                    <div class="price-tag mono">от $50/час</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Эскалация привилегий (AD/Cloud)</span>
+                        <span class="service-desc">Углублённый анализ векторов повышения прав в Active Directory и облачных средах (AWS, Azure, GCP).</span>
+                    </div>
+                    <div class="price-tag mono">от $250</div>
+                </div>
+            </div>
+
+            <!-- Категория 04: Консалтинг и аудит -->
+            <div class="category-header mono">04 / Consulting & Audit</div>
+            <div class="service-list">
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Аудит конфигурации безопасности</span>
+                        <span class="service-desc">Проверка настроек ОС, сетевого оборудования, СУБД, веб-серверов на соответствие best practices и стандартам (CIS benchmarks).</span>
+                    </div>
+                    <div class="price-tag mono">от $150</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Security Awareness Training</span>
+                        <span class="service-desc">Обучение сотрудников основам кибербезопасности, защите от фишинга, безопасной работе с данными.</span>
+                    </div>
+                    <div class="price-tag mono">от $80</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Разработка политик ИБ</span>
+                        <span class="service-desc">Создание внутренней документации: политики паролей, доступа, реагирования на инциденты.</span>
+                    </div>
+                    <div class="price-tag mono">от $200</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Часовой консалтинг / Разбор кейса</span>
+                        <span class="service-desc">Профессиональная консультация по вопросам безопасности, разбор конкретной ситуации.</span>
+                    </div>
+                    <div class="price-tag mono">$25/час</div>
+                </div>
+            </div>
+
+            <!-- Категория 05: Форензика -->
+            <div class="category-header mono">05 / Digital Forensics</div>
+            <div class="service-list">
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Анализ образа диска (FTK, Autopsy)</span>
+                        <span class="service-desc">Восстановление удалённых файлов, анализ артефактов, timeline атак.</span>
+                    </div>
+                    <div class="price-tag mono">от $300</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Анализ памяти (Volatility)</span>
+                        <span class="service-desc">Поиск вредоносного ПО, скрытых процессов, rootkit по дампу оперативной памяти.</span>
+                    </div>
+                    <div class="price-tag mono">от $250</div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-info">
+                        <span class="service-title">Мобильная форензика</span>
+                        <span class="service-desc">Извлечение и анализ данных с мобильных устройств (Android/iOS).</span>
+                    </div>
+                    <div class="price-tag mono">от $200</div>
+                </div>
+            </div>
+
+            <!-- Блок важных уточнений -->
+            <div class="info-block danger-note">
+                <div class="mono text-[10px] text-[#ff3b3b] mb-2 uppercase tracking-wider">⚠️ Важные условия</div>
+                <ul class="text-xs text-[#888] space-y-2">
+                    <li>• <span class="text-white">Разрешительная документация</span> — для пентеста внешних/внутренних сетей требуется официальное разрешение от владельца инфраструктуры.</li>
+                    <li>• <span class="text-white">NDA (Соглашение о неразглашении)</span> — гарантирую полную конфиденциальность полученных данных и отчётов. Договор NDA подписывается до начала работ.</li>
+                    <li>• <span class="text-white">Срочные заказы</span> (дедлайн менее 3 рабочих дней) тарифицируются с коэффициентом x1.5.</li>
+                    <li>• <span class="text-white">Результат</span> — предоставляется детальный отчёт с описанием уязвимостей, PoC-кодом и рекомендациями по устранению.</li>
+                </ul>
+            </div>
+
+            <!-- Блок форматов оплаты -->
+            <div class="info-block mono uppercase tracking-wider text-[10px] mt-4">
+                <span class="text-white">Payment:</span> USDT (TRC-20 / BEP-20) / TON / BTC. Фиат для юр.лиц по договору.
+            </div>
+        </main>
+
+        <footer class="mono">
+            <div>qFumiq © 2026</div>
+            <div>Penetration Testing • SOC • Forensics</div>
+            <a href="mailto:contact@qfumiq.live" class="hover:text-white transition-colors">contact@qfumiq.live</a>
+        </footer>
+    </div>
+
+</body>
+</html>
